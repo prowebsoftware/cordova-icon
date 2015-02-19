@@ -17,8 +17,8 @@ var getPlatforms = function (projectName) {
     platforms.push({
         name : 'ios',
         // TODO: use async fs.exists
-        isAdded : fs.existsSync('platforms/ios'),
-        iconsPath : 'platforms/ios/' + projectName + '/Resources/icons/',
+        isAdded : fs.existsSync('icons/ios'),
+        iconsPath : 'icons/ios/',
         icons : [
             { name : 'icon-40.png',       size : 40  },
             { name : 'icon-40@2x.png',    size : 80  },
@@ -39,15 +39,14 @@ var getPlatforms = function (projectName) {
     });
     platforms.push({
         name : 'android',
-        iconsPath : 'platforms/android/res/',
-        isAdded : fs.existsSync('platforms/android'),
+        iconsPath : 'icons/android/',
+        isAdded : fs.existsSync('icons/android'),
         icons : [
-            { name : 'drawable/icon.png',       size : 96 },
-            { name : 'drawable-hdpi/icon.png',  size : 72 },
-            { name : 'drawable-ldpi/icon.png',  size : 36 },
-            { name : 'drawable-mdpi/icon.png',  size : 48 },
-            { name : 'drawable-xhdpi/icon.png', size : 96 },
-            { name : 'drawable-xxhdpi/icon.png', size : 144 },
+            { name : 'icon-96.png',       size : 96 },
+            { name : 'icon-72.png',  size : 72 },
+            { name : 'icon-36.png',  size : 36 },
+            { name : 'icon-48.png',  size : 48 },
+            { name : 'icon-96.png', size : 96 },
         ]
     });
     // TODO: add all platforms
