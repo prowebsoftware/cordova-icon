@@ -47,6 +47,7 @@ var getPlatforms = function (projectName) {
             { name : 'icon-36.png',  size : 36 },
             { name : 'icon-48.png',  size : 48 },
             { name : 'icon-96.png', size : 96 },
+            { name : 'icon-512.png', size : 512 }
         ]
     });
     // TODO: add all platforms
