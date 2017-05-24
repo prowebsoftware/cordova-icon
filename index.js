@@ -13,6 +13,7 @@ var argv   = require('minimist')(process.argv.slice(2));
 var settings = {};
 settings.CONFIG_FILE = argv.config || 'config.xml';
 settings.ICON_FILE = argv.icon || 'icon.png';
+settings.ORDERZING_DIR = argv.orderzing_dir || '';
 settings.OLD_XCODE_PATH = argv['xcode-old'] || false;
 
 /**
@@ -206,7 +207,7 @@ var generateIcon = function (platform, icon) {
   if (fs.existsSync(platformPath)) {
     srcPath = platformPath;
   }
-  var dstPath = platform.iconsPath + icon.name;
+  var dstPath = settings.ORDERZING_DIR + icon.name || platform.iconsPath + icon.name;
   var dst = path.dirname(dstPath);
   if (!fs.existsSync(dst)) {
     fs.mkdirsSync(dst);
