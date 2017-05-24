@@ -1,3 +1,7 @@
+# OrderZing changes
+
+To support OrderZing made simple changes to direct output to ORDERZING_DIR specified on command line, and added extra images to be generated for app stores (feature icons). 
+
 # cordova-icon
 
 <img src="cordova-icon-resize.png"/>
